@@ -725,11 +725,11 @@
     .op-card p { font-size: 14px; color: rgba(255,255,255,.65); line-height: 1.6; }
     .op-quote {
       background: rgba(255,174,67,.1); border: 1px solid rgba(255,174,67,.2);
-      border-radius: var(--radius); padding: 28px 36px;
-      display: flex; align-items: center; gap: 20px;
+      border-radius: var(--radius); padding: 36px 48px;
+      display: flex; flex-direction: column; align-items: center; text-align: center; gap: 16px;
     }
-    .op-quote-icon { font-size: 36px; flex-shrink: 0; }
-    .op-quote p { font-size: 20px; font-weight: 800; color: var(--yellow); line-height: 1.4; }
+    .op-quote-icon { font-size: 40px; }
+    .op-quote p { font-size: clamp(20px, 2.5vw, 28px); font-weight: 900; color: var(--yellow); line-height: 1.4; }
 
     /* Pitch 30 segundos */
     #pitch { background: var(--light); }
@@ -1257,8 +1257,8 @@
         <div class="pitch-title">"Cómo vender PXStudio Ads en 30 segundos"</div>
         <div class="pitch-text">
           Ayudamos a hoteles a <strong>aumentar sus reservas directas</strong> a través de Google Ads.<br><br>
-          El hotel invierte directamente en publicidad, <strong>nosotros gestionamos las campañas sin costo de gestión</strong>, y optimizamos constantemente para mejorar resultados.<br><br>
-          Además, <strong>reinvertimos parte del rendimiento</strong> para escalar las campañas y generar más reservas.
+          El hotel nos paga <strong>USD 150 mensuales</strong> para activar y mantener las campañas. Nosotros, como expertos, <strong>invertimos ese dinero en Google Ads</strong> y gestionamos todo sin costo adicional.<br><br>
+          Además, <strong>reinvertimos parte del rendimiento</strong> para escalar las campañas y generar más reservas directas.
         </div>
         <div class="pitch-tip">
           <span>💬</span>
@@ -1276,7 +1276,7 @@
       <div class="modelo-header fade-up">
         <div class="tag light">Modelo de negocio</div>
         <h2 class="section-title">Pagás cuando ganás.</h2>
-        <p class="section-sub">Sin inversión inicial. Sin riesgo. Solo pagás cuando las campañas generan resultados reales.</p>
+        <p class="section-sub">USD 150 mensuales es todo lo que necesitás para empezar. Nosotros, como expertos, lo invertimos en Google para generar reservas directas.</p>
       </div>
 
       <div class="modelo-cards">
@@ -1294,10 +1294,10 @@
           <p>Solo cuando se genera una reserva directa atribuida a las campañas. Si no hay reservas, no hay comisión. Alineamos nuestro éxito con el tuyo.</p>
         </div>
         <div class="modelo-card fade-up">
-          <div class="modelo-card-icon">💡</div>
-          <h3>Sin inversión en ads</h3>
-          <div class="modelo-card-value">USD 0 <span>inicial</span></div>
-          <p>La inversión publicitaria en Google está incluida en el modelo. No hay setup, no hay costos ocultos, no hay sorpresas en la factura.</p>
+          <div class="modelo-card-icon">🚀</div>
+          <h3>Nosotros invertimos por vos</h3>
+          <div class="modelo-card-value">USD 150 <span>/ mes</span></div>
+          <p>No es un costo: es inversión en crecimiento. Cada peso invertido en Google trabaja para traer reservas directas a tu hotel.</p>
         </div>
       </div>
 
@@ -1318,26 +1318,21 @@
     <div style="text-align:center" class="fade-up">
       <div class="tag">El proceso</div>
       <h2 class="section-title">Cómo funciona, paso a paso.</h2>
-      <p class="section-sub" style="margin:12px auto 0">Cuatro pasos simples que explican exactamente qué hace PXStudio Ads y cómo genera resultados.</p>
+      <p class="section-sub" style="margin:12px auto 0">Tres pasos simples que explican exactamente qué hace PXStudio Ads y cómo genera resultados.</p>
     </div>
-    <div class="cf-steps">
+    <div class="cf-steps" style="grid-template-columns:repeat(3,1fr)">
       <div class="cf-step fade-up">
         <div class="cf-step-num">1</div>
-        <h4>El hotel invierte en Google Ads</h4>
-        <p>Inversión publicitaria mínima recomendada desde USD 150/mes. El dinero va directo a Google, no a intermediarios.</p>
+        <h4>PXStudio gestiona las campañas</h4>
+        <p>Campañas, anuncios, estrategia y optimización. Todo a cargo del equipo especializado, sin costo de gestión adicional para el hotel.</p>
       </div>
       <div class="cf-step fade-up">
         <div class="cf-step-num">2</div>
-        <h4>PXStudio gestiona sin costo de gestión</h4>
-        <p>Campañas, anuncios, estrategia y optimización. Todo a cargo del equipo especializado, sin cobrar gestión al hotel.</p>
-      </div>
-      <div class="cf-step fade-up">
-        <div class="cf-step-num">3</div>
         <h4>Optimización con datos reales del sector</h4>
         <p>Usamos datos de estacionalidad, comportamiento y conversión del sector hotelero para tomar mejores decisiones.</p>
       </div>
       <div class="cf-step fade-up">
-        <div class="cf-step-num">4</div>
+        <div class="cf-step-num">3</div>
         <h4>Reinversión para escalar resultados</h4>
         <p>Parte del rendimiento se reinvierte para ampliar el alcance de las campañas y generar más reservas directas.</p>
       </div>
@@ -1748,24 +1743,6 @@
         </div>
       </div>
 
-      <div class="benefits-numbers fade-up">
-        <div class="benefits-num-item">
-          <div class="benefits-num">14%</div>
-          <div class="benefits-num-label">Comisión solo por resultado</div>
-        </div>
-        <div class="benefits-num-item">
-          <div class="benefits-num">7</div>
-          <div class="benefits-num-label">Días para campañas activas</div>
-        </div>
-        <div class="benefits-num-item">
-          <div class="benefits-num">30</div>
-          <div class="benefits-num-label">Días para primera reserva</div>
-        </div>
-        <div class="benefits-num-item">
-          <div class="benefits-num">3x</div>
-          <div class="benefits-num-label">ROI promedio sobre inversión mensual</div>
-        </div>
-      </div>
     </div>
   </div>
 </section>
@@ -1921,7 +1898,7 @@
         </div>
       </div>
       <div class="cierre-cta fade-up">
-        <a href="#" class="btn btn-primary">Agendar análisis gratuito →</a>
+        <a href="https://meetings.hubspot.com/jorge-santilli" target="_blank" class="btn btn-primary">Agendar análisis gratuito →</a>
         <p style="margin-top:16px;font-size:14px;color:rgba(255,255,255,.4)">Sin compromiso · Sin costo de gestión · Resultados en 30 días</p>
       </div>
     </div>
@@ -1932,22 +1909,16 @@
 <section id="cta-final">
   <div class="container">
     <div class="cta-inner">
-      <div class="tag light" style="margin-bottom:24px">Empezá hoy</div>
-      <h2 class="section-title" style="color:#fff;margin-bottom:16px">¿Tu hotel está listo para<br>vender sin intermediarios?</h2>
-      <p class="section-sub" style="color:rgba(255,255,255,.6);margin:0 auto 40px">Campaña activa en 7 días. Primera reserva directa en 30. Sin riesgos.</p>
+      <div class="tag light" style="margin-bottom:24px">Para el BDR</div>
+      <h2 class="section-title" style="color:#fff;margin-bottom:16px">¿Listo para proponer<br>PXStudio Ads a un hotel?</h2>
+      <p class="section-sub" style="color:rgba(255,255,255,.6);margin:0 auto 40px">Usá esta herramienta como guía de conversación. Cada sección está pensada para ayudarte a cerrar.</p>
       <div class="cta-buttons">
-        <a href="#" class="btn btn-primary" style="font-size:17px;padding:18px 40px">
-          Proponer a un hotel →
+        <a href="https://meetings.hubspot.com/jorge-santilli" target="_blank" class="btn btn-primary" style="font-size:17px;padding:18px 40px">
+          Agendar análisis gratuito →
         </a>
-        <a href="#faq" class="btn btn-outline" style="font-size:17px;padding:18px 40px">
-          Revisar objeciones
+        <a href="#objeciones" class="btn btn-outline" style="font-size:17px;padding:18px 40px">
+          Ver objeciones
         </a>
-      </div>
-      <div class="cta-trust">
-        <span class="cta-trust-item">Sin inversión inicial en ads</span>
-        <span class="cta-trust-item">Campañas activas en 7 días</span>
-        <span class="cta-trust-item">Comisión solo por resultados</span>
-        <span class="cta-trust-item">CSM dedicado</span>
       </div>
     </div>
   </div>
