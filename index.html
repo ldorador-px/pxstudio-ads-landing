@@ -679,6 +679,263 @@
     .comp-highlight td:first-child::before {
       content: '→'; position: absolute; left: 4px; color: var(--orange); font-weight: 900;
     }
+    /* ─── NUEVAS SECCIONES BDR ────────────────────────── */
+
+    /* Problema hotel hoy */
+    #problema-hotel { background: #fff; }
+    .ph-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin: 48px 0; }
+    .ph-item {
+      display: flex; align-items: flex-start; gap: 16px;
+      background: var(--light); border-radius: var(--radius); padding: 24px;
+      border-left: 4px solid transparent; transition: all .3s;
+    }
+    .ph-item:hover { border-left-color: var(--orange); background: #fff; box-shadow: var(--shadow); }
+    .ph-icon { font-size: 28px; flex-shrink: 0; margin-top: 2px; }
+    .ph-item h4 { font-size: 16px; font-weight: 800; margin-bottom: 4px; }
+    .ph-item p { font-size: 14px; color: var(--gray); line-height: 1.6; }
+    .ph-stat { font-size: 22px; font-weight: 900; margin-top: 6px;
+      background: var(--grad); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .ph-quote {
+      background: var(--black); color: #fff; border-radius: 20px;
+      padding: 36px 48px; text-align: center; margin-top: 48px;
+    }
+    .ph-quote p { font-size: clamp(18px, 2.5vw, 26px); font-weight: 800; line-height: 1.4; }
+    .ph-quote span { color: var(--yellow); }
+
+    /* La oportunidad */
+    #oportunidad { background: var(--black); color: #fff; position: relative; overflow: hidden; }
+    #oportunidad::before {
+      content: ''; position: absolute; top: -150px; right: -150px;
+      width: 500px; height: 500px; border-radius: 50%;
+      background: radial-gradient(ellipse, rgba(255,174,67,.15) 0%, transparent 70%);
+    }
+    .op-inner { position: relative; z-index: 1; }
+    .op-header { text-align: center; margin-bottom: 64px; }
+    .op-header .section-title { color: #fff; }
+    .op-header .section-sub { color: rgba(255,255,255,.6); margin: 12px auto 0; }
+    .op-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-bottom: 48px; }
+    .op-card {
+      background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.1);
+      border-radius: var(--radius); padding: 32px 24px; text-align: center;
+      transition: all .3s;
+    }
+    .op-card:hover { background: rgba(255,255,255,.1); transform: translateY(-4px); }
+    .op-card-icon { font-size: 40px; margin-bottom: 16px; }
+    .op-card h3 { font-size: 18px; font-weight: 800; color: #fff; margin-bottom: 8px; }
+    .op-card p { font-size: 14px; color: rgba(255,255,255,.65); line-height: 1.6; }
+    .op-quote {
+      background: rgba(255,174,67,.1); border: 1px solid rgba(255,174,67,.2);
+      border-radius: var(--radius); padding: 28px 36px;
+      display: flex; align-items: center; gap: 20px;
+    }
+    .op-quote-icon { font-size: 36px; flex-shrink: 0; }
+    .op-quote p { font-size: 20px; font-weight: 800; color: var(--yellow); line-height: 1.4; }
+
+    /* Pitch 30 segundos */
+    #pitch { background: var(--light); }
+    .pitch-box {
+      background: var(--black); border-radius: 24px;
+      padding: 56px 64px; position: relative; overflow: hidden;
+    }
+    .pitch-box::before {
+      content: ''; position: absolute; top: -80px; right: -80px;
+      width: 300px; height: 300px; border-radius: 50%;
+      background: radial-gradient(ellipse, rgba(255,174,67,.2) 0%, transparent 70%);
+    }
+    .pitch-box::after {
+      content: ''; position: absolute; bottom: -60px; left: -60px;
+      width: 250px; height: 250px; border-radius: 50%;
+      background: radial-gradient(ellipse, rgba(210,10,17,.2) 0%, transparent 70%);
+    }
+    .pitch-inner { position: relative; z-index: 1; }
+    .pitch-label {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(255,174,67,.15); border: 1px solid rgba(255,174,67,.3);
+      color: var(--yellow); padding: 6px 18px; border-radius: 100px;
+      font-size: 12px; font-weight: 800; letter-spacing: 1px; text-transform: uppercase;
+      margin-bottom: 24px;
+    }
+    .pitch-title { font-size: clamp(22px, 3vw, 32px); font-weight: 900; color: #fff; margin-bottom: 32px; }
+    .pitch-text {
+      font-size: 18px; color: rgba(255,255,255,.85); line-height: 1.8;
+      border-left: 4px solid var(--orange); padding-left: 24px;
+      max-width: 700px;
+    }
+    .pitch-text strong { color: #fff; }
+    .pitch-tip {
+      margin-top: 32px; padding: 20px 24px;
+      background: rgba(255,255,255,.06); border-radius: 12px;
+      display: flex; align-items: center; gap: 12px;
+      font-size: 14px; color: rgba(255,255,255,.6);
+    }
+    .pitch-tip strong { color: var(--yellow); }
+
+    /* Cómo funciona el modelo */
+    #como-funciona { background: #fff; }
+    .cf-steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; position: relative; margin: 64px 0 48px; }
+    .cf-steps::before {
+      content: ''; position: absolute; top: 28px; left: 14%; right: 14%;
+      height: 2px; background: linear-gradient(to right, var(--yellow), var(--orange), var(--red), var(--bordeaux));
+    }
+    .cf-step { text-align: center; padding: 0 16px; position: relative; }
+    .cf-step-num {
+      width: 56px; height: 56px; border-radius: 50%;
+      background: var(--grad); color: #fff;
+      font-size: 22px; font-weight: 900;
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 20px; position: relative; z-index: 1;
+      box-shadow: 0 8px 24px rgba(210,10,17,.3);
+    }
+    .cf-step h4 { font-size: 15px; font-weight: 800; margin-bottom: 8px; }
+    .cf-step p { font-size: 13px; color: var(--gray); line-height: 1.5; }
+    .cf-highlight {
+      background: linear-gradient(135deg, #FFF8EE, #FFF3E0);
+      border: 2px solid var(--yellow); border-radius: 20px;
+      padding: 28px 40px; display: flex; align-items: center; gap: 20px;
+    }
+    .cf-highlight-icon { font-size: 36px; flex-shrink: 0; }
+    .cf-highlight p { font-size: 20px; font-weight: 800; color: var(--bordeaux); }
+
+    /* Por qué es diferente */
+    #diferente { background: var(--light); }
+    .dif-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; margin: 48px 0; }
+    .dif-col {
+      background: #fff; border-radius: 20px; padding: 36px;
+      box-shadow: var(--shadow);
+    }
+    .dif-col.highlighted {
+      background: var(--black);
+      box-shadow: 0 16px 48px rgba(0,0,0,.2);
+    }
+    .dif-col-title {
+      font-size: 16px; font-weight: 800; margin-bottom: 24px;
+      display: flex; align-items: center; gap: 10px;
+    }
+    .dif-col.highlighted .dif-col-title { color: #fff; }
+    .dif-col-badge {
+      padding: 4px 12px; border-radius: 100px; font-size: 11px; font-weight: 700;
+    }
+    .dif-col-badge.bad { background: rgba(239,68,68,.1); color: #dc2626; }
+    .dif-col-badge.good { background: rgba(34,197,94,.15); color: #16a34a; }
+    .dif-item {
+      display: flex; align-items: flex-start; gap: 12px;
+      padding: 12px 0; border-bottom: 1px solid rgba(255,255,255,.06);
+      font-size: 14px; line-height: 1.5;
+    }
+    .dif-col:not(.highlighted) .dif-item { border-bottom-color: #F0F0F0; color: var(--gray); }
+    .dif-col.highlighted .dif-item { color: rgba(255,255,255,.8); }
+    .dif-item:last-child { border-bottom: none; }
+    .dif-check { font-size: 16px; flex-shrink: 0; margin-top: 1px; }
+    .dif-quote {
+      margin-top: 48px; text-align: center;
+      background: #fff; border-radius: 20px; padding: 32px;
+      box-shadow: var(--shadow); border-top: 4px solid var(--orange);
+    }
+    .dif-quote p { font-size: 20px; font-weight: 800; color: var(--black); line-height: 1.4; }
+    .dif-quote span { color: var(--orange); }
+
+    /* Casos de éxito */
+    #casos { background: #fff; }
+    .casos-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; margin-top: 48px; }
+    .caso-card {
+      background: var(--light); border-radius: 24px; overflow: hidden;
+      box-shadow: var(--shadow); transition: transform .3s;
+    }
+    .caso-card:hover { transform: translateY(-6px); box-shadow: 0 24px 48px rgba(0,0,0,.12); }
+    .caso-img-wrap {
+      position: relative; overflow: hidden; background: #1A1A1A;
+      display: grid; grid-template-columns: 1fr 1fr; gap: 2px;
+    }
+    .caso-img-wrap img {
+      width: 100%; height: 180px; object-fit: cover; object-position: top left;
+      display: block;
+    }
+    .caso-img-wrap img.full { grid-column: 1 / -1; height: 200px; object-position: top center; }
+    .caso-body { padding: 32px; }
+    .caso-brand { display: flex; align-items: center; gap: 12px; margin-bottom: 20px; }
+    .caso-brand-icon {
+      width: 44px; height: 44px; border-radius: 10px;
+      background: var(--grad); display: flex; align-items: center;
+      justify-content: center; font-size: 20px;
+    }
+    .caso-brand-name { font-size: 18px; font-weight: 900; }
+    .caso-brand-type { font-size: 12px; color: var(--gray); font-weight: 600; }
+    .caso-section { margin-bottom: 20px; }
+    .caso-section-label {
+      font-size: 11px; font-weight: 800; color: var(--gray); text-transform: uppercase;
+      letter-spacing: 1px; margin-bottom: 8px;
+    }
+    .caso-section p { font-size: 14px; color: #444; line-height: 1.6; }
+    .caso-results { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 24px; }
+    .caso-result {
+      background: #fff; border-radius: 12px; padding: 16px 12px; text-align: center;
+      border: 1.5px solid #F0F0F0;
+    }
+    .caso-result-val { font-size: 22px; font-weight: 900; line-height: 1;
+      background: var(--grad); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .caso-result-lbl { font-size: 11px; color: var(--gray); font-weight: 600; margin-top: 4px; }
+
+    /* Objeciones BDR */
+    #objeciones { background: var(--light); }
+    .obj-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 48px; }
+    .obj-card {
+      background: #fff; border-radius: var(--radius);
+      padding: 28px; box-shadow: var(--shadow);
+      border-top: 3px solid var(--orange);
+      transition: transform .25s;
+    }
+    .obj-card:hover { transform: translateY(-3px); }
+    .obj-question {
+      font-size: 16px; font-weight: 800; color: var(--black);
+      margin-bottom: 12px; display: flex; gap: 10px; align-items: flex-start;
+    }
+    .obj-q-icon { font-size: 18px; flex-shrink: 0; }
+    .obj-answer { font-size: 14px; color: var(--gray); line-height: 1.7; }
+    .obj-answer strong { color: var(--black); }
+
+    /* Cómo cerrar */
+    #cierre { background: var(--black); color: #fff; position: relative; overflow: hidden; }
+    #cierre::before {
+      content: ''; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);
+      width: 800px; height: 400px; border-radius: 50%;
+      background: radial-gradient(ellipse, rgba(255,174,67,.12) 0%, transparent 70%);
+    }
+    .cierre-inner { position: relative; z-index: 1; }
+    .cierre-header { text-align: center; margin-bottom: 64px; }
+    .cierre-header .section-title { color: #fff; }
+    .cierre-header .section-sub { color: rgba(255,255,255,.6); margin: 12px auto 0; }
+    .cierre-steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-bottom: 48px; }
+    .cierre-step {
+      background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.1);
+      border-radius: var(--radius); padding: 32px 24px; text-align: center;
+      transition: all .3s;
+    }
+    .cierre-step:hover { background: rgba(255,255,255,.1); transform: translateY(-4px); }
+    .cierre-step-num {
+      width: 48px; height: 48px; border-radius: 50%;
+      background: var(--grad); color: #fff;
+      font-size: 20px; font-weight: 900;
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 16px;
+    }
+    .cierre-step h4 { font-size: 17px; font-weight: 800; color: #fff; margin-bottom: 8px; }
+    .cierre-step p { font-size: 14px; color: rgba(255,255,255,.65); line-height: 1.6; }
+    .cierre-cta { text-align: center; }
+    .cierre-cta .btn-primary { font-size: 18px; padding: 20px 48px; }
+
+    /* Responsive nuevas secciones */
+    @media (max-width: 900px) {
+      .ph-grid, .op-grid, .dif-grid, .casos-grid, .obj-grid, .cierre-steps { grid-template-columns: 1fr; }
+      .cf-steps { grid-template-columns: 1fr 1fr; }
+      .cf-steps::before { display: none; }
+      .caso-results { grid-template-columns: repeat(3, 1fr); }
+      .pitch-box { padding: 36px 28px; }
+    }
+    @media (max-width: 600px) {
+      .cf-steps, .caso-results { grid-template-columns: 1fr 1fr; }
+      .caso-img-wrap { grid-template-columns: 1fr; }
+      .caso-img-wrap img.full { height: 180px; }
+    }
   </style>
 </head>
 <body>
@@ -694,12 +951,12 @@
   <div class="nav-inner">
     <a href="#"><img src="assets/logo-pxstudio.png" alt="PXStudio" class="logo-img" /></a>
     <ul class="nav-links">
-      <li><a href="#problema">Problema</a></li>
-      <li><a href="#solucion">Solución</a></li>
-      <li><a href="#modelo">Modelo</a></li>
-      <li><a href="#halo">Efecto Halo</a></li>
-      <li><a href="#para-quien">¿Para quién?</a></li>
-      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#problema-hotel">Problema</a></li>
+      <li><a href="#pitch">Pitch</a></li>
+      <li><a href="#como-funciona">Modelo</a></li>
+      <li><a href="#casos">Casos</a></li>
+      <li><a href="#objeciones">Objeciones</a></li>
+      <li><a href="#cierre">Cierre</a></li>
     </ul>
     <div class="nav-cta">
       <a href="#faq" class="btn-nav btn-nav-ghost">Ver objeciones</a>
@@ -768,6 +1025,54 @@
           <div class="hero-stat-lbl">Retención clientes</div>
         </div>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── PROBLEMA DEL HOTEL HOY ──────────────────────── -->
+<section id="problema-hotel">
+  <div class="container">
+    <div style="text-align:center" class="fade-up">
+      <div class="tag">El contexto del mercado</div>
+      <h2 class="section-title">El problema del hotel hoy</h2>
+      <p class="section-sub" style="margin:12px auto 0">La mayoría de los hoteles independientes dependen de canales que no controlan y que se llevan una parte enorme de su rentabilidad.</p>
+    </div>
+    <div class="ph-grid">
+      <div class="ph-item fade-up">
+        <div class="ph-icon">🏦</div>
+        <div>
+          <h4>Alta dependencia de OTAs</h4>
+          <p>Booking, Expedia y similares manejan entre el 50% y 80% de las reservas de un hotel independiente típico.</p>
+          <div class="ph-stat">+60% reservas por OTAs</div>
+        </div>
+      </div>
+      <div class="ph-item fade-up">
+        <div class="ph-icon">💸</div>
+        <div>
+          <h4>Comisiones que erosionan el margen</h4>
+          <p>Cada reserva por OTA cuesta entre un 15% y 30% en comisiones. En un hotel de 20 hab., eso puede ser miles de dólares por mes.</p>
+          <div class="ph-stat">hasta 30% por reserva</div>
+        </div>
+      </div>
+      <div class="ph-item fade-up">
+        <div class="ph-icon">🔒</div>
+        <div>
+          <h4>Sin control sobre sus propias ventas</h4>
+          <p>Las OTAs no comparten datos del huésped, no permiten fidelizar y el hotel queda rehén de los cambios de algoritmo.</p>
+          <div class="ph-stat">0 datos del huésped</div>
+        </div>
+      </div>
+      <div class="ph-item fade-up">
+        <div class="ph-icon">👁️</div>
+        <div>
+          <h4>Baja visibilidad en Google</h4>
+          <p>Sin inversión en Ads, el hotel aparece en página 3 o directamente no aparece. Sus competidores (y las OTAs) sí lo hacen.</p>
+          <div class="ph-stat">Pág. 3 sin inversión</div>
+        </div>
+      </div>
+    </div>
+    <div class="ph-quote fade-up">
+      <p>Si no invertís en tu canal directo,<br><span>estás dejando tus ventas en manos de terceros.</span></p>
     </div>
   </div>
 </section>
@@ -856,6 +1161,40 @@
   </div>
 </section>
 
+<!-- ─── LA OPORTUNIDAD ───────────────────────────────── -->
+<section id="oportunidad">
+  <div class="container">
+    <div class="op-inner">
+      <div class="op-header fade-up">
+        <div class="tag light">La oportunidad</div>
+        <h2 class="section-title">Las reservas ya existen.<br>La pregunta es quién se las queda.</h2>
+        <p class="section-sub">Google es hoy el canal de adquisición más potente para hoteles. Miles de viajeros buscan alojamiento todos los días. El problema es que la mayoría de esa demanda la capturan las OTAs, no los hoteles.</p>
+      </div>
+      <div class="op-grid">
+        <div class="op-card fade-up">
+          <div class="op-card-icon">🔍</div>
+          <h3>Google como canal clave</h3>
+          <p>El 70% de los viajeros empieza su búsqueda de alojamiento en Google. Estar ahí, en el momento exacto, es la diferencia entre conseguir la reserva directa o perderla.</p>
+        </div>
+        <div class="op-card fade-up">
+          <div class="op-card-icon">🎯</div>
+          <h3>Usuarios listos para reservar</h3>
+          <p>No son usuarios navegando: son personas con fecha, destino y presupuesto definido. El nivel de intención de compra en Google Ads hotelero es altísimo.</p>
+        </div>
+        <div class="op-card fade-up">
+          <div class="op-card-icon">📈</div>
+          <h3>Reservas directas sin intermediarios</h3>
+          <p>Cada reserva capturada por el canal directo es una comisión que el hotel se ahorra. A escala, el impacto en la rentabilidad es significativo y acumulativo.</p>
+        </div>
+      </div>
+      <div class="op-quote fade-up">
+        <div class="op-quote-icon">💡</div>
+        <p>"Las reservas ya existen. La diferencia está en quién se las queda."</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ─── SOLUCIÓN ──────────────────────────────────────── -->
 <section id="solucion">
   <div class="container">
@@ -904,6 +1243,32 @@
   </div>
 </section>
 
+<!-- ─── PITCH 30 SEGUNDOS ────────────────────────────── -->
+<section id="pitch">
+  <div class="container">
+    <div style="text-align:center;margin-bottom:48px" class="fade-up">
+      <div class="tag">Herramienta para el BDR</div>
+      <h2 class="section-title">¿Cómo lo explicás en 30 segundos?</h2>
+      <p class="section-sub" style="margin:12px auto 0">Copiá este pitch, adaptalo a tu estilo y usalo en cualquier conversación. Claro, corto y sin tecnicismos.</p>
+    </div>
+    <div class="pitch-box fade-up">
+      <div class="pitch-inner">
+        <div class="pitch-label">⚡ Pitch de 30 segundos</div>
+        <div class="pitch-title">"Cómo vender PXStudio Ads en 30 segundos"</div>
+        <div class="pitch-text">
+          Ayudamos a hoteles a <strong>aumentar sus reservas directas</strong> a través de Google Ads.<br><br>
+          El hotel invierte directamente en publicidad, <strong>nosotros gestionamos las campañas sin costo de gestión</strong>, y optimizamos constantemente para mejorar resultados.<br><br>
+          Además, <strong>reinvertimos parte del rendimiento</strong> para escalar las campañas y generar más reservas.
+        </div>
+        <div class="pitch-tip">
+          <span>💬</span>
+          <span><strong>Tip para el BDR:</strong> Si el hotel pregunta "¿cuánto me cuesta?", la respuesta es: <em>"La inversión mínima en Google Ads es desde USD 150. La gestión de campañas no tiene costo para vos."</em></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ─── MODELO DE NEGOCIO ──────────────────────────────── -->
 <section id="modelo">
   <div class="container">
@@ -943,6 +1308,43 @@
           <p>Solo invertís desde USD 150 en Ads. La comisión del 14% aplica exclusivamente sobre reservas directas generadas por las campañas. Es un modelo pensado para que el hotel nunca pierda y nosotros solo ganemos cuando vos ganás.</p>
         </div>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── CÓMO FUNCIONA EL MODELO ──────────────────────── -->
+<section id="como-funciona">
+  <div class="container">
+    <div style="text-align:center" class="fade-up">
+      <div class="tag">El proceso</div>
+      <h2 class="section-title">Cómo funciona, paso a paso.</h2>
+      <p class="section-sub" style="margin:12px auto 0">Cuatro pasos simples que explican exactamente qué hace PXStudio Ads y cómo genera resultados.</p>
+    </div>
+    <div class="cf-steps">
+      <div class="cf-step fade-up">
+        <div class="cf-step-num">1</div>
+        <h4>El hotel invierte en Google Ads</h4>
+        <p>Inversión publicitaria mínima recomendada desde USD 150/mes. El dinero va directo a Google, no a intermediarios.</p>
+      </div>
+      <div class="cf-step fade-up">
+        <div class="cf-step-num">2</div>
+        <h4>PXStudio gestiona sin costo de gestión</h4>
+        <p>Campañas, anuncios, estrategia y optimización. Todo a cargo del equipo especializado, sin cobrar gestión al hotel.</p>
+      </div>
+      <div class="cf-step fade-up">
+        <div class="cf-step-num">3</div>
+        <h4>Optimización con datos reales del sector</h4>
+        <p>Usamos datos de estacionalidad, comportamiento y conversión del sector hotelero para tomar mejores decisiones.</p>
+      </div>
+      <div class="cf-step fade-up">
+        <div class="cf-step-num">4</div>
+        <h4>Reinversión para escalar resultados</h4>
+        <p>Parte del rendimiento se reinvierte para ampliar el alcance de las campañas y generar más reservas directas.</p>
+      </div>
+    </div>
+    <div class="cf-highlight fade-up">
+      <div class="cf-highlight-icon">🚀</div>
+      <p>"No es un costo: es inversión en crecimiento. Cada peso invertido en Google trabaja para traer reservas directas."</p>
     </div>
   </div>
 </section>
@@ -1004,6 +1406,46 @@
           <p>💡 <strong>Para el vendedor:</strong> Cuando el cliente diga "pero solo veo X reservas atribuidas", recordale que hay todo un ecosistema de reservas que ocurren gracias a la presencia en Google pero que <strong>nunca quedan registradas como atribución directa</strong>. El valor real siempre es mayor al que muestra el reporte.</p>
         </div>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── POR QUÉ ES DIFERENTE ─────────────────────────── -->
+<section id="diferente">
+  <div class="container">
+    <div style="text-align:center;margin-bottom:48px" class="fade-up">
+      <div class="tag">Diferenciación</div>
+      <h2 class="section-title">¿Por qué es diferente a una agencia tradicional?</h2>
+      <p class="section-sub" style="margin:12px auto 0">No hacemos Ads genéricos. Trabajamos con datos reales de hoteles y tecnología propia.</p>
+    </div>
+    <div class="dif-grid">
+      <div class="dif-col fade-up">
+        <div class="dif-col-title">
+          🏢 Agencia tradicional
+          <span class="dif-col-badge bad">Sin especialización</span>
+        </div>
+        <div class="dif-item"><span class="dif-check">❌</span> Trabaja con cualquier rubro — sin expertise hotelero</div>
+        <div class="dif-item"><span class="dif-check">❌</span> Cobra por gestión independientemente de resultados</div>
+        <div class="dif-item"><span class="dif-check">❌</span> No conoce estacionalidad ni comportamiento hotelero</div>
+        <div class="dif-item"><span class="dif-check">❌</span> Optimiza para clics, no para reservas</div>
+        <div class="dif-item"><span class="dif-check">❌</span> Sin integración con motor de reservas ni PMS</div>
+        <div class="dif-item"><span class="dif-check">❌</span> Reportes genéricos difíciles de interpretar</div>
+      </div>
+      <div class="dif-col highlighted fade-up">
+        <div class="dif-col-title">
+          ⭐ PXStudio Ads
+          <span class="dif-col-badge good">100% hotelero</span>
+        </div>
+        <div class="dif-item"><span class="dif-check">✅</span> Especialización exclusiva en hospitalidad e industria hotelera</div>
+        <div class="dif-item"><span class="dif-check">✅</span> Sin costo de gestión — comisión solo sobre reservas atribuidas</div>
+        <div class="dif-item"><span class="dif-check">✅</span> Datos reales de estacionalidad y comportamiento del sector</div>
+        <div class="dif-item"><span class="dif-check">✅</span> Optimización enfocada en reservas directas, no en métricas vacías</div>
+        <div class="dif-item"><span class="dif-check">✅</span> Integración con motores de reserva y tecnología Pxsol</div>
+        <div class="dif-item"><span class="dif-check">✅</span> Reportes en lenguaje hotelero: reservas, ingresos, costo por reserva</div>
+      </div>
+    </div>
+    <div class="dif-quote fade-up">
+      <p>"No hacemos Ads genéricos.<br><span>Trabajamos con datos reales de hoteles."</span></p>
     </div>
   </div>
 </section>
@@ -1090,6 +1532,96 @@
           </div>
         </div>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── CASOS DE ÉXITO ───────────────────────────────── -->
+<section id="casos">
+  <div class="container">
+    <div style="text-align:center" class="fade-up">
+      <div class="tag">Resultados reales</div>
+      <h2 class="section-title">Hoteles que ya lo están haciendo.</h2>
+      <p class="section-sub" style="margin:12px auto 0">Casos reales de hoteles que aumentaron sus reservas directas con PXStudio Ads.</p>
+    </div>
+    <div class="casos-grid">
+
+      <!-- CASO 1: Piattelli -->
+      <div class="caso-card fade-up">
+        <div class="caso-img-wrap">
+          <img src="assets/caso-piattelli-desktop.png" alt="Piattelli en Google Search desktop" class="full" />
+        </div>
+        <div class="caso-body">
+          <div class="caso-brand">
+            <div class="caso-brand-icon">🍷</div>
+            <div>
+              <div class="caso-brand-name">Piattelli Wine Resort</div>
+              <div class="caso-brand-type">Wine Resort · Cafayate, Argentina</div>
+            </div>
+          </div>
+          <div class="caso-section">
+            <div class="caso-section-label">📌 Situación inicial</div>
+            <p>Alta dependencia de OTAs, poca visibilidad en Google y sin canal directo consolidado para capturar demanda orgánica del destino.</p>
+          </div>
+          <div class="caso-section">
+            <div class="caso-section-label">🛠 Qué hicimos</div>
+            <p>Activación de Google Search Ads y Google Hotel Ads con estrategia orientada a reservas directas. Segmentación por intención de compra con foco en el destino Cafayate.</p>
+          </div>
+          <div class="caso-results">
+            <div class="caso-result">
+              <div class="caso-result-val">8.940</div>
+              <div class="caso-result-lbl">Clics al sitio</div>
+            </div>
+            <div class="caso-result">
+              <div class="caso-result-val">94.213</div>
+              <div class="caso-result-lbl">Impresiones</div>
+            </div>
+            <div class="caso-result">
+              <div class="caso-result-val">801</div>
+              <div class="caso-result-lbl">Conversiones</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CASO 2: Farnese -->
+      <div class="caso-card fade-up">
+        <div class="caso-img-wrap">
+          <img src="assets/caso-farnese-mobile.png" alt="Farnese en Google Search mobile" style="height:200px;object-fit:cover;width:100%;grid-column:1/-1" />
+        </div>
+        <div class="caso-body">
+          <div class="caso-brand">
+            <div class="caso-brand-icon">🏨</div>
+            <div>
+              <div class="caso-brand-name">Farnese Apart & Spa</div>
+              <div class="caso-brand-type">Apart Hotel & Spa · Argentina</div>
+            </div>
+          </div>
+          <div class="caso-section">
+            <div class="caso-section-label">📌 Situación inicial</div>
+            <p>Presencia digital limitada y motor de reservas subutilizado. El hotel recibía tráfico pero no lo convertía en reservas directas.</p>
+          </div>
+          <div class="caso-section">
+            <div class="caso-section-label">🛠 Qué hicimos</div>
+            <p>Campaña de Google Ads orientada a conversión con optimización continua de audiencias y mensajes. Integración con motor de reservas para tracking preciso.</p>
+          </div>
+          <div class="caso-results">
+            <div class="caso-result">
+              <div class="caso-result-val">9.130</div>
+              <div class="caso-result-lbl">Clics al sitio</div>
+            </div>
+            <div class="caso-result">
+              <div class="caso-result-val">150.614</div>
+              <div class="caso-result-lbl">Impresiones</div>
+            </div>
+            <div class="caso-result">
+              <div class="caso-result-val">2.039</div>
+              <div class="caso-result-lbl">Conversiones</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
@@ -1238,6 +1770,35 @@
   </div>
 </section>
 
+<!-- ─── OBJECIONES BDR ───────────────────────────────── -->
+<section id="objeciones">
+  <div class="container">
+    <div style="text-align:center" class="fade-up">
+      <div class="tag">Para el equipo de ventas</div>
+      <h2 class="section-title">Objeciones comunes.<br>Respuestas listas.</h2>
+      <p class="section-sub" style="margin:12px auto 0">Las preguntas que más aparecen en las conversaciones de venta. Tenelas claras antes de cada llamada.</p>
+    </div>
+    <div class="obj-grid">
+      <div class="obj-card fade-up">
+        <div class="obj-question"><span class="obj-q-icon">🤔</span>"¿Por qué cobran comisión si ya pago por los Ads?"</div>
+        <div class="obj-answer">La inversión en Ads va 100% a Google para mostrar tus anuncios. La comisión del 14% corresponde a la <strong>reinversión y optimización de las campañas</strong> para mejorar resultados continuamente. La gestión en sí no tiene costo para el hotel.</div>
+      </div>
+      <div class="obj-card fade-up">
+        <div class="obj-question"><span class="obj-q-icon">🤔</span>"¿Esto reemplaza a Booking?"</div>
+        <div class="obj-answer">No reemplaza a Booking, lo <strong>complementa y reduce la dependencia gradualmente</strong>. La idea es que con el tiempo el canal directo pese más en la mezcla, bajando el costo total de adquisición por reserva.</div>
+      </div>
+      <div class="obj-card fade-up">
+        <div class="obj-question"><span class="obj-q-icon">🤔</span>"¿Qué pasa si no veo resultados?"</div>
+        <div class="obj-answer">Contamos con <strong>optimización continua, más de 15 años de experiencia</strong> en el sector hotelero y datos reales del mercado. Los primeros resultados suelen verse en los primeros 30 días. Si algo no funciona, ajustamos — no dejamos campañas corriendo solas.</div>
+      </div>
+      <div class="obj-card fade-up">
+        <div class="obj-question"><span class="obj-q-icon">🤔</span>"¿Es caro?"</div>
+        <div class="obj-answer">No es un costo: <strong>es inversión directa en publicidad</strong>. El mínimo desde USD 150 va 100% a Google Ads. Comparalo con lo que pagás de comisión a Booking por una sola reserva — el retorno suele ser muy superior.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ─── FAQ ────────────────────────────────────────────── -->
 <section id="faq">
   <div class="container">
@@ -1329,6 +1890,40 @@
         </div>
       </div>
 
+    </div>
+  </div>
+</section>
+
+<!-- ─── CÓMO CERRAR LA CONVERSACIÓN ─────────────────── -->
+<section id="cierre">
+  <div class="container">
+    <div class="cierre-inner">
+      <div class="cierre-header fade-up">
+        <div class="tag light">Para el BDR</div>
+        <h2 class="section-title">Siguiente paso.</h2>
+        <p class="section-sub">Cuando el hotel está interesado, así se cierra la conversación.</p>
+      </div>
+      <div class="cierre-steps">
+        <div class="cierre-step fade-up">
+          <div class="cierre-step-num">1</div>
+          <h4>Analizamos tu hotel sin costo</h4>
+          <p>Revisamos el sitio web, el motor de reservas, el destino y el potencial de demanda en Google. Sin compromiso.</p>
+        </div>
+        <div class="cierre-step fade-up">
+          <div class="cierre-step-num">2</div>
+          <h4>Te mostramos cuánto podrías estar vendiendo</h4>
+          <p>Con datos reales del sector estimamos el volumen de búsquedas, el costo por reserva y el retorno esperado para tu propiedad.</p>
+        </div>
+        <div class="cierre-step fade-up">
+          <div class="cierre-step-num">3</div>
+          <h4>Definimos la estrategia juntos</h4>
+          <p>Diseñamos la campaña inicial, acordamos la inversión mínima y activamos en menos de 7 días. Sin burocracia.</p>
+        </div>
+      </div>
+      <div class="cierre-cta fade-up">
+        <a href="#" class="btn btn-primary">Agendar análisis gratuito →</a>
+        <p style="margin-top:16px;font-size:14px;color:rgba(255,255,255,.4)">Sin compromiso · Sin costo de gestión · Resultados en 30 días</p>
+      </div>
     </div>
   </div>
 </section>
