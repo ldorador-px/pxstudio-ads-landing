@@ -87,10 +87,9 @@
       height: 68px;
     }
     .logo-img {
-      height: 36px; display: block; transition: filter .3s ease;
-      filter: brightness(0) invert(1);
+      height: 40px; display: block; transition: filter .3s ease;
     }
-    nav.scrolled .logo-img { filter: none; }
+    nav.scrolled .logo-img { filter: brightness(0) saturate(100%) invert(30%) sepia(80%) saturate(600%) hue-rotate(340deg) brightness(90%); }
     .nav-links { display: flex; gap: 32px; list-style: none; }
     .nav-links a {
       font-weight: 700; font-size: 14px; text-decoration: none;
@@ -950,7 +949,7 @@
 <!-- ─── NAV ─────────────────────────────────────────── -->
 <nav id="main-nav">
   <div class="nav-inner">
-    <a href="#"><img src="assets/logo-pxstudio.png" alt="PXStudio" class="logo-img" /></a>
+    <a href="#"><img src="assets/logo-pxstudio-new.png" alt="PXStudio" class="logo-img" /></a>
     <ul class="nav-links">
       <li><a href="#problema-hotel">Problema</a></li>
       <li><a href="#pitch">Pitch</a></li>
